@@ -1,37 +1,62 @@
-/* Add a black background color to the top navigation */
+/* Top Navigation Bar */
 .topnav {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #8B0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f; /* Elegant dark theme */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Style the links inside the navigation bar */
+/* Navigation Links */
 .topnav a {
-  background-color: inherit;
-  float: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 20px 20px;
-  transition: 0.3s;
-  color: #ffffff;
-  font-size: 20px;
-  border-bottom: 4px solid #b22222;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #f1f1f1;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 3px solid transparent;
+  position: relative;
 }
 
-/* Change the color of links on hover */
+/* Hover Effects */
 .topnav a:hover {
-  background-color: #ffb7d2;
+  background-color: #333;
+  color: #ff6b6b;
+  border-bottom: 3px solid #ff6b6b;
 }
 
-/* Add an active class to highlight the current page */
-.active {
-    background-color: #5fe0e2;
-    color: white;
+/* Active Link */
+.topnav a.active {
+  color: #ffffff;
+  border-bottom: 3px solid #1abc9c;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
+/* Responsive Toggle Icon (hidden by default) */
 .topnav .icon {
-    display: none;
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topnav a {
+    width: 100%;
+    padding: 14px 20px;
+    border-bottom: 1px solid #444;
+  }
+
+  .topnav .icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
