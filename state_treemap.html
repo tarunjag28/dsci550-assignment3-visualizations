@@ -21,10 +21,19 @@
       border-radius: 4px;
       pointer-events: none;
     }
+    .description {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
 <h2 style="text-align:center;">State Haunted Places Treemap</h2>
+<p class="description">
+  The treemap visualizes haunted places by state in a compact space, with area size proportional to the count. It provides a more intuitive representation of distribution than a bar chart when comparing many states.
+</p>
 <div id="treemap"></div>
 <script>
 const width = 960, height = 600;
