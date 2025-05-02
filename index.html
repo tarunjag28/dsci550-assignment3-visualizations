@@ -1,33 +1,41 @@
-<script src="java.js"></script>
-<link rel="stylesheet" type = "text/css" href="style.css">
-<div class="main">
-  <head>
-    <h1> Home </h1>
-  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="State_bar_chart.html">State Bar Chart</a>
-  <a href="city_bar_chart.html">City Bar Chart</a>
-  <a href="event_pie_chart.html">Event Pie Chart</a>
-  <a href="time_donut_chart">Time Donut Chart</a>
-  <a href="state_treemap.html">State Treemap</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-    <!info about the page>
-  </head>
-</div>
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+  <header>
+    <h1>Home</h1>
+
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="State_bar_chart.html">State Bar Chart</a>
+      <a href="city_bar_chart.html">City Bar Chart</a>
+      <a href="event_pie_chart.html">Event Pie Chart</a>
+      <a href="time_donut_chart.html">Time Donut Chart</a>
+      <a href="state_treemap.html">State Treemap</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+
+  <script src="java.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
         x.className += " responsive";
-    } else {
+      } else {
         x.className = "topnav";
+      }
     }
-}
-</script>
+  </script>
+
+</body>
+</html>
