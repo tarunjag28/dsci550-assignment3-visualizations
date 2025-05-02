@@ -9,10 +9,19 @@
     body { font-family: Arial, sans-serif; }
     .legend { font-size: 12px; }
     .legend rect { stroke-width: 2; }
+    .description {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
 <h2 style="text-align:center;">Ghost Sighting Time of Day</h2>
+<p class="description">
+  Based on cleaned timestamp data, this chart displays when ghost sightings typically occur (e.g., night vs. morning). It helps highlight temporal patterns in reported hauntings.
+</p>
 <div style="display: flex; justify-content: center; align-items: center;">
   <div id="donut-chart"></div>
   <div id="legend" style="margin-left: 30px;"></div>
