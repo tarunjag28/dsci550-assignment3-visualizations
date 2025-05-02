@@ -13,10 +13,19 @@
     #chart-container {
       overflow-x: auto;
     }
+    .description {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
 <h2 style="text-align:center;">Top Haunted Cities</h2>
+<p class="description">
+  This chart ranks cities by the number of haunted places. The data was cleaned and aggregated in Assignment 1, and this visualization makes it easy to compare haunting frequency across urban centers.
+</p>
 <div id="chart-container">
   <div id="bar-chart"></div>
 </div>
@@ -31,7 +40,6 @@ d3.json("city_counts.json")
     console.log("Raw data loaded:", data);
     const filteredData = data.filter(d => d.count >= 10);
     console.log("Filtered data (count >= 5):", filteredData);
-
 
     const dynamicWidth = Math.max(filteredData.length * barWidth, 400);
 
